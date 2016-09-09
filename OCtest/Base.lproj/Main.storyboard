@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIe-ZK-qSD">
+                                <rect key="frame" x="150" y="70" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="045-9y-XnP"/>
+                                    <constraint firstAttribute="width" constant="300" id="nqT-Jg-435"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bc-AA-JQX">
+                                <rect key="frame" x="150" y="141" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l1g-5l-n34"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只能输入小数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-V1-1eK">
+                                <rect key="frame" x="150" y="110" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mJm-iD-7QA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只能输入整数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zJ-B6-b2D">
+                                <rect key="frame" x="150" y="39" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G1l-kC-bTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0gy-V1-1eK" firstAttribute="trailing" secondItem="zIe-ZK-qSD" secondAttribute="trailing" id="Ci1-nS-Tmp"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DQD-pO-ghh"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KKb-Jz-PiS"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="top" secondItem="3zJ-B6-b2D" secondAttribute="bottom" constant="10" id="L2Y-y9-frx"/>
+                            <constraint firstItem="6bc-AA-JQX" firstAttribute="leading" secondItem="zIe-ZK-qSD" secondAttribute="leading" id="QZP-AU-Ey2"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="leading" secondItem="3zJ-B6-b2D" secondAttribute="leading" id="SEY-VB-Nqa"/>
+                            <constraint firstItem="6bc-AA-JQX" firstAttribute="trailing" secondItem="zIe-ZK-qSD" secondAttribute="trailing" id="SU4-YF-LiR"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="X0Z-Sk-n0a"/>
+                            <constraint firstItem="0gy-V1-1eK" firstAttribute="leading" secondItem="zIe-ZK-qSD" secondAttribute="leading" id="j00-lg-ZX9"/>
+                            <constraint firstItem="0gy-V1-1eK" firstAttribute="top" secondItem="zIe-ZK-qSD" secondAttribute="bottom" constant="10" id="sx1-oc-fuG"/>
+                            <constraint firstItem="6bc-AA-JQX" firstAttribute="top" secondItem="0gy-V1-1eK" secondAttribute="bottom" constant="10" id="vgs-AY-Qxb"/>
+                            <constraint firstItem="zIe-ZK-qSD" firstAttribute="trailing" secondItem="3zJ-B6-b2D" secondAttribute="trailing" id="zjX-Xk-ND0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KKb-Jz-PiS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="6bc-AA-JQX" id="X95-aW-Pd4"/>
+                        <outlet property="volumeTextField" destination="zIe-ZK-qSD" id="H3V-9F-cbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="443" y="386"/>
         </scene>
     </scenes>
 </document>
